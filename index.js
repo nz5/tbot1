@@ -3,7 +3,7 @@ const GOTLER = [
 ];
 
 const BOMBALAR = [
-    "Nizami", "nizami", "Putin", "putin", "Ilham", "ilham"
+    "Nizami", "nizami", "Putin", "putin", "Ilham", "ilham", "Trump", "trump"
 ];
 const {Telegraf} = require('telegraf');
 const bot = new Telegraf('1525462758:AAEbM86corKfiCiQQvp5ZaGv95NMTZFW1MY');
