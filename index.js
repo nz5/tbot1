@@ -5,6 +5,18 @@ const GOTLER = [
 const BOMBALAR = [
     "Nizami", "nizami", "Putin", "putin", "Ilham", "ilham", "Trump", "trump"
 ];
+
+const http = require('http');
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+http.createServer( function (request, response) {
+
+})
+    .listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
+});
+
+
 const {Telegraf} = require('telegraf');
 const bot = new Telegraf('1525462758:AAEbM86corKfiCiQQvp5ZaGv95NMTZFW1MY');
 bot.start(ctx => {

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/nz5/tbot1#readme",
   "dependencies": {
+    "http": "0.0.1-security",
+    "http-server": "^0.12.3",
     "telegraf": "^4.0.0"
   }
 }
