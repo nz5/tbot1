@@ -7,7 +7,7 @@ const BOMBALAR = [
 ];
 
 const POLL = [
-    "ses ver", "Ses ver"
+    "ses", "Ses"
 ];
 const http = require('http');
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
