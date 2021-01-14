@@ -9,21 +9,26 @@ const BOMBALAR = [
 const POLL = [
     "ses", "Ses"
 ];
+
+const QOY = [
+    "nezaketsizlik", "Nezaketsizlik"
+];
+
 const http = require('http');
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
-http.createServer( function (request, response) {
+http.createServer(function (request, response) {
 
 })
-    .listen(server_port, server_host, function() {
-    console.log('Listening on port %d', server_port);
-});
+    .listen(server_port, server_host, function () {
+        console.log('Listening on port %d', server_port);
+    });
 
 
 const {Telegraf} = require('telegraf');
 const bot = new Telegraf('1525462758:AAEbM86corKfiCiQQvp5ZaGv95NMTZFW1MY');
 bot.start(ctx => {
-    let result = ctx.botInfo.first_name + ": Ya Allah! Getdiy " + ctx.message.from.first_name;
+    let result = "Ya Allah! ";
     ctx.reply(result);
 });
 
@@ -40,6 +45,9 @@ bot.on("text", ctx => {
         } else if (POLL.indexOf(word) > -1) {
             const detectedWord = POLL[POLL.indexOf(word)];
             result = "ses verirem: Telegram";
+        } else if (QOY.indexOf(word) > -1) {
+            const detectedWord = QOY[QOY.indexOf(word)];
+            result = "Men de sene qoyuram ay brat";
         }
     })
     if (result) {
