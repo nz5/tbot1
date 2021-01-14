@@ -6,6 +6,9 @@ const BOMBALAR = [
     "Nizami", "nizami", "Putin", "putin", "Ilham", "ilham", "Trump", "trump"
 ];
 
+const POLL = [
+    "ses ver", "Ses ver"
+];
 const http = require('http');
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
@@ -34,6 +37,9 @@ bot.on("text", ctx => {
         } else if (BOMBALAR.indexOf(word) > -1) {
             const detectedWord = BOMBALAR[BOMBALAR.indexOf(word)];
             result = detectedWord + " bomba oglandi";
+        } else if (POLL.indexOf(word) > -1) {
+            const detectedWord = POLL[POLL.indexOf(word)];
+            result = "ses verirem: Telegram";
         }
     })
     if (result) {
